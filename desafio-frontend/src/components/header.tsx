@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { Saira_Stencil_One } from "next/font/google";
 import { SearchBar, SearchBarIcon } from "./search-bar";
 import { CartControl } from "./cart-control";
+import { FilterBar } from "./filter-bar";
 
 
 
@@ -60,10 +61,14 @@ export function Header(props:HeaderProps) {
       <div>
           <SearchBarIcon placeholder="Procurando por algo específico? "></SearchBarIcon>
           <CartControl></CartControl>
+          
       </div>
+      
+      
 
 
  </TagHeader>
+ 
 
  )
 
