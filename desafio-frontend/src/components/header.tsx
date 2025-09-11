@@ -6,6 +6,7 @@ import { Saira_Stencil_One } from "next/font/google";
 import { SearchBar, SearchBarIcon } from "./search-bar";
 import { CartControl } from "./cart-control";
 import { FilterBar } from "./filter-bar";
+import { useFilter } from "@/hooks/useFilter";
 
 
 
@@ -51,6 +52,8 @@ line-height: 150%;
 `
 
 export function Header(props:HeaderProps) {
+
+  const {setSearch, search} = useFilter();
  return (
 
     <TagHeader>
@@ -59,7 +62,10 @@ export function Header(props:HeaderProps) {
     <Logo className={sairaStencil.className}>capputeeno</Logo>  
        
       <div>
-          <SearchBarIcon placeholder="Procurando por algo específico? "></SearchBarIcon>
+          <SearchBarIcon 
+          value={search}
+          handleChange={setSearch}
+          placeholder="Procurando por algo específico? "></SearchBarIcon>
           <CartControl></CartControl>
           
       </div>

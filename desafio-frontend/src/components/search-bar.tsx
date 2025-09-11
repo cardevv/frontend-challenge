@@ -33,7 +33,8 @@ width: 352px;
 `
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-    
+    value : string,
+    handleChange: (value: string) => void
 }
 
 export function  SearchBarIcon (props: InputProps) {
@@ -41,7 +42,7 @@ export function  SearchBarIcon (props: InputProps) {
     return (
 
        <InputContainer>
-       <SearchBar {...props}></SearchBar>
+       <SearchBar  onChange={(event) => props.handleChange(event.target.value)}{...props}></SearchBar>
        <SearchIcon></SearchIcon>
        </InputContainer>
     )

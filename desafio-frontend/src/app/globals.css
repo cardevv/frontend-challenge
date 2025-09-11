@@ -1,10 +1,14 @@
 :root {
  --logo-color: #5D5D6D;
   --border-radius: 12px;
+  --bg-primary: #f0f0f5;
   --bg-secondary: #F3F5F6;
   --text-dark: #737380;
   --delete-color: #de3838;
   --orange-low: #FFA585;
+  --text-dark-2: #41414d;
+  --shapes-dark: #09090a;
+  --shapes: #dce2e6;
 ;
 }
 
